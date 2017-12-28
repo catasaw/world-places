@@ -2,9 +2,11 @@
   <div class="right tomster"></div>
   <h2>Welcome!</h2>
   <p>We hope you find exciting places here!</p>
-  <div></div>
-  {{location-map location='Seattle'}}
   {{#link-to 'about' class="button"}}
     About Us
   {{/link-to}}
 </div>
+
+{{#each model as |placeUnit|}}
+{{place-listing place=placeUnit}}
+{{/each}}
